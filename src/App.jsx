@@ -397,12 +397,11 @@ export default function App() {
       <div style={{ textAlign: "center", marginBottom: 14 }}>
         <WizzLogo size={24} />
         <div style={{ fontSize: 15, fontWeight: 600, marginTop: 4 }}>Progressive Unlock</div>
-        <div style={{ fontSize: 11, color: C.muted, marginTop: 2 }}>Product Card · Interactive Prototype</div>
       </div>
 
       {/* CTA */}
       <div style={{
-        maxWidth: 600, width: "100%",
+        maxWidth: 560, width: "100%",
         background: "rgba(233,30,140,.06)", border: "1px solid rgba(233,30,140,.12)",
         borderRadius: 12, padding: "10px 16px", marginBottom: 16,
         textAlign: "center", fontSize: 12, color: C.muted, lineHeight: 1.5,
@@ -415,19 +414,19 @@ export default function App() {
       </div>
 
       {/* Layout */}
-      <div style={{ display: "flex", gap: 20, alignItems: "flex-start", maxWidth: 640 }}>
+      <div style={{ display: "flex", gap: 20, alignItems: "flex-start", maxWidth: 580 }}>
 
         {/* ═══ PHONE ═══ */}
         <div style={{
-          width: 375, minWidth: 375, height: 740, borderRadius: 44,
+          width: 320, minWidth: 320, height: 640, borderRadius: 38,
           border: "3px solid #333", overflow: "hidden",
           position: "relative", display: "flex", flexDirection: "column",
           background: C.bg, boxShadow: "0 24px 80px rgba(0,0,0,.6)",
         }}>
           {/* Status bar */}
-          <div style={{ height: 48, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 24px" }}>
-            <span style={{ fontSize: 14, fontWeight: 600 }}>9:41</span>
-            <div style={{ width: 126, height: 32, borderRadius: 16, background: "#000" }} />
+          <div style={{ height: 42, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 20px" }}>
+            <span style={{ fontSize: 13, fontWeight: 600 }}>9:41</span>
+            <div style={{ width: 110, height: 28, borderRadius: 14, background: "#000" }} />
             <span style={{ fontSize: 12 }}>●● 📶 🔋</span>
           </div>
 
