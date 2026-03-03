@@ -397,7 +397,7 @@ export default function App() {
       <div style={{ textAlign: "center", marginBottom: 14 }}>
         <WizzLogo size={24} />
         <div style={{ fontSize: 15, fontWeight: 600, marginTop: 4 }}>Progressive Unlock</div>
-        <div style={{ fontSize: 11, color: C.muted, marginTop: 2 }}>Product Card</div>
+        <div style={{ fontSize: 11, color: C.muted, marginTop: 2 }}>Product Card · Interactive Prototype</div>
       </div>
 
       {/* CTA */}
