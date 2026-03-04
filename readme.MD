@@ -13,7 +13,7 @@ Profile content unlocks gradually as users exchange messages, giving them a reas
 |----------|-------------|----------------|
 | **0** (match) | - | Photo 1 + Name + Age + Country. All other content blurred with "🔓 Send 3 messages to unlock" |
 | **3** | Bio + Interest stickers + Zodiac | Celebratory animation in chat. Both users see it |
-| **5** | Deezer music + Photos 2-3 | Same animation pattern |
+| **5** | Photos 2-3 | Same animation pattern |
 | **10** (MD) | Full profile + Video + Full Profile badge | Badge visible to other users in swipe stack |
 
 ### Reveal Shortcut
@@ -24,7 +24,7 @@ At any locked milestone, a "Reveal Now" button appears. Costs 100 WiCoins via th
 
 | Case | Behavior |
 |------|----------|
-| Empty profiles (< 3 photos AND no bio/music) | Feature disabled for that profile. Gate behind completeness ≥ "Good" |
+| Empty profiles (< 3 photos AND no bio) | Feature disabled for that profile. Gate behind completeness ≥ "Good" |
 | One-sided conversation | Both must exchange N messages total (prevents spam-unlocking) |
 | Block / report | Unlocked content re-locks immediately |
 | Existing conversations at launch | Already past msg 10 = all content visible, no retroactive locking |
@@ -40,7 +40,7 @@ At any locked milestone, a "Reveal Now" button appears. Costs 100 WiCoins via th
 | **Secondary** | Message 5+ rate |
 | **Secondary** | Reveal booster purchases/day |
 | **Secondary** | Profile completion rate |
-| **Guardrail** | D7 retention by gender (especially female) |
+| **Guardrail** | D7 retention by gender |
 | **Guardrail** | Match acceptance rate |
 
 ---
@@ -52,7 +52,7 @@ At any locked milestone, a "Reveal Now" button appears. Costs 100 WiCoins via th
 | `progressive_unlock.milestone_reached` | Conversation hits msg 3, 5, or 10 | `milestone`, `conversation_id`, `time_since_match`, `user_gender` | MD conversion funnel by stage |
 | `progressive_unlock.animation_viewed` | Unlock animation displays | `milestone`, `conversation_id` | Feature visibility |
 | `progressive_unlock.reveal_tapped` | User taps "Reveal Now" | `milestone`, `conversation_id` | Monetization intent |
-| `progressive_unlock.reveal_purchased` | Reveal purchase completes | `milestone`, `wicoins_spent`, `conversation_id` | ARPPU impact, WiCoin sink velocity |
+| `progressive_unlock.reveal_purchased` | Reveal purchase completes | `milestone`, `wicoins_spent`, `conversation_id` | ARPPU impact |
 | `progressive_unlock.reveal_abandoned` | User taps Reveal but doesn't buy | `milestone`, `reason` (insufficient_wicoins / cancelled) | Conversion friction |
 
 ---
@@ -61,7 +61,7 @@ At any locked milestone, a "Reveal Now" button appears. Costs 100 WiCoins via th
 
 | Phase | Timeline | Scope | Criteria to advance |
 |-------|----------|-------|---------------------|
-| **1** | Week 1-2 | A/B 50/50 new users in Australia | D7 + D14: MD ≥ +2pts, female retention flat, acceptance ≥ -3pts |
+| **1** | Week 1-2 | A/B 50/50 new users in Australia | D7 + D14: MD ≥ +2pts, women retention flat, acceptance ≥ -3pts |
 | **2** | Week 3 | Replicate A/B 50/50 in UK or Canada | Same thresholds, rules out country-specific effects |
 | **3** | Week 4-6 | US: 10% → 20% → 50% → 100% new users | Same go/no-go checked daily |
 
